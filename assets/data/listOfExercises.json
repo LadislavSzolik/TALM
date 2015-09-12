@@ -1,0 +1,27 @@
+{
+    "mainMenuTitleText": "Welcome",
+    "exerciseTabs": [
+        [
+            {
+                "id": "N1a",
+                "level": 1,
+                "cathegory": "digNum",
+                "name": "N1a",
+                "url": "#/objectsCounter",
+                "bcgColor": "{'background-color': 'rgb(255, 102, 255)','color': '#FFFFFF'}",
+                "textColor": "{'color': '#FFFFFF'}"
+            }
+        ],
+        [
+            {
+                "id": "N1b",
+                "level": 1,
+                "cathegory": "digNum",
+                "name": "N1b",
+                "url": "#/dragAndDropExercise",
+                "bcgColor": "{'background-color': 'rgb(255, 102, 150)','color': '#FFFFFF'}",
+                "textColor": "{'color': '#FFFFFF'}"
+            }
+        ]
+    ]
+}

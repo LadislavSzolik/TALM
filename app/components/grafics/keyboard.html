@@ -1,0 +1,81 @@
+<div class="container-key">
+    <div class="col-my" ng-repeat="key in [1,2,3,4,5,6,7,8,9]">
+        <input type="button" keyboard-button is-demo-key="{{isDemo}}" class="btn-circle" value="{{key}}" ng-disabled="scoreActive" ng-click="updatePoposal(key)" />
+    </div>
+
+    <div class="col-my-full">
+        <input type="button" class="btn-circle" value="0" ng-disabled="scoreActive" ng-click="updatePoposal(0)" />
+    </div>
+</div>
+
+
+
+<style type="text/css">
+    .container-key {
+        width: 120px;
+        margin: auto;
+    }
+    
+    .col-my {
+        float: left;
+        width: 33.33333%;
+        position: relative;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    
+    .col-my-full {
+        float: left;
+        width: 100%;
+        position: relative;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    
+    .btn-circle:hover:enabled {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .btn-circle:active:enabled {
+        position: relative;
+        top: 2px;
+        color: white;
+    }
+    
+    .btn-circle {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.428571429;
+        border-radius: 18px;
+        background: none;
+        border-color: white;
+        display: inline;
+        border: 1.5px solid white;
+        -webkit-transition: all 200ms;
+        transition: all 200ms;
+    }
+    
+    .btn-circle.btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 25px;
+    }
+    
+    .btn-circle.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        font-size: 24px;
+        line-height: 1.33;
+        border-radius: 35px;
+    }
+
+</style>

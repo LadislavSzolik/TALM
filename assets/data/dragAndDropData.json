@@ -1,0 +1,10 @@
+{
+    "imgUrl": "assets/img/pink-flower.png",
+    "numLimit": 10,
+    "randomNumberArray": "",
+    "titleText": "Select a number of objects",
+    "solutionText": "Solution",
+    "exampleTitleText": "Example",
+    "finalScoreText": "Final score",
+    "resultcheckIncompleteText": "Not all results are filled up. Do you really want to evaluate your result?"
+}

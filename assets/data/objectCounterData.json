@@ -1,0 +1,15 @@
+{
+    "imgUrl": "assets/img/pink-flower.png",
+    "numLimit": 20,
+    "randomNumberArray": "",
+    "titleText": "How many flowers do you see?",
+    "checkButtonText": "Check Result",
+    "solutionText": "Solution",
+    "exampleTitleText": "Example",
+    "closeButtonText": "Close",
+    "finalScoreText": "Final score",
+    "resultcheckIncompleteText": "Not all results are filled up. Do you really want to evaluate your result?",
+    "yesText": "Yes",
+    "noText": "No"
+
+}

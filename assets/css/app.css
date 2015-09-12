@@ -1,0 +1,214 @@
+body {
+    font-weight: 300;
+    color: white;
+    background-color: rgb(6, 70, 85);
+}
+.title {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 40px;
+}
+.col-xs-2 {
+    margin: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+a {
+    padding: 20px;
+}
+a:hover {
+    text-decoration: none;
+}
+.header {
+    background-color: rgb(86, 205, 16);
+}
+.exercise-overall {
+    margin: 10px;
+    border: 3px solid #FFF;
+    background-color: rgb(48, 120, 5);
+}
+.demo-title {
+    line-height: normal;
+    font-size: 25px;
+    display: inline;
+    font-weight: 100;
+    margin: 15px 0px 0px 10px;
+}
+
+/* exercise close button css */
+
+.close-exercise {
+    margin-top: 10px;
+    float: right;
+    cursor: pointer;
+}
+.close-demo {
+    float: right;
+    cursor: pointer;
+}
+
+/* popup example box css */
+
+.example-content {
+    background-color: #002400;
+    border: 1px solid #FFF;
+    border-radius: 3px 3px 3px 3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: fixed;
+    display: block;
+    left: 50%;
+    margin-left: -200px;
+    top: 150px;
+    width: 470px;
+    padding: 15px;
+    text-align: center;
+}
+
+/* exercise main  title css */
+
+.exercise-main-title {
+    display: inline;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 15px 0px 0px 10px;
+}
+.exercise-task {
+    margin-bottom: 20px;
+}
+.exercise-task li {
+    display: inline-block;
+    margin: 10px;
+}
+.exercise-task ul {
+    padding: 0px
+}
+
+/* demo play button */
+
+.demo-play-button {
+    z-index: 100;
+    top: 0px;
+    height: 328px;
+    cursor: pointer;
+    position: absolute;
+    padding-top: 55px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: rgba(128, 128, 128, 0.8);
+}
+
+/* container with objects and result */
+
+.container-field {
+    position: relative;
+    float: left;
+    height: 259px;
+    width: 259px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.container-result {
+    float: left;
+    width: 140px;
+    padding: 5px;
+    padding-top: 10px;
+    border-radius: 8px;
+    background: rgb(216, 17, 63);
+}
+.counted-object {
+    position: absolute;
+    display: inline;
+}
+.result-title {
+    font-size: 22px;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+.result-sub-container {
+    position: relative;
+    height: 40px;
+    width: 130px;
+}
+.td-result-title {
+    font-weight: 300;
+    font-size: 20px;
+}
+.td-check-result {
+    width: 45%;
+}
+
+/* remove button */
+
+.remove-button {
+    float: left;
+    margin-left: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.remove-button-disabled {
+    float: left;
+    margin-left: 10px;
+    margin-top: 8px;
+    pointer-events: none;
+}
+.result-input {
+    float: left;
+    width: 70px;
+    font-weight: 400;
+    margin: auto;
+    border: 1px solid #FFF;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: white;
+}
+.result-input::-webkit-input-placeholder {
+    color: white;
+}
+.result-input:-moz-placeholder {
+    color: white;
+}
+.result-input::-moz-placeholder {
+    color: white;
+}
+.result-input:-ms-input-placeholder {
+    color: white;
+}
+
+/* ---- Drag and drop exercise --- */
+
+.result-circle-field {
+    float: left;
+    padding: 5px;
+    margin-top: 85px;
+    margin-left: 30px;
+    padding-top: 25px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 200;
+    border-radius: 48px;
+    border: 1px solid #FFF;
+    background: rgb(44, 137, 150);
+}
+.drop-field,
+.drop-target-field {
+    position: relative;
+    float: left;
+    height: 259px;
+    width: 259px;
+    margin-right: 5px;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 99;
+}
+.drop-target-field {
+    z-index: 98;
+}

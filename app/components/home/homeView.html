@@ -1,0 +1,19 @@
+<div class="row view-frame" >
+
+    <div class="row title">{{mainMenu.mainMenuTitleText}}</div>
+    
+    <div class="row">        
+        <div class="col-xs-2 header" >Numbers &amp; Digits</div>
+        <div class="col-xs-2 header" >+/-</div>
+        <div class="col-xs-2 header" >* / /</div>
+        <div class="col-xs-2 header" >Units</div>
+        <div class="col-xs-2 header" >Geometry</div>
+    </div>
+    
+    <div class="row" ng-repeat="level in mainMenu.exerciseTabs"> 
+        <div class="col-xs-2" ng-style="{{exercise.bcgColor}}" ng-repeat="exercise in level" >
+            <a class="brand" ng-style="{{exercise.textColor}}" ng-href="{{exercise.url}}">{{exercise.name}}</a>
+        </div>    
+    </div>
+        
+</div>

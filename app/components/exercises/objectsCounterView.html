@@ -1,0 +1,81 @@
+<div class="container-fluid exercise-overall">
+
+
+    <div class="close-exercise" close-button what-to-close="exercise"></div>
+    <div class="exercise-main-title">{{data.titleText}}</div>
+
+    <div class="exercise-task">
+        <form name="scoreForm" novalidate>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <ul>
+                            <li ng-repeat="subExe in exercise.subExes">
+                                <div class="container-field">
+                                    <div ng-repeat="pos in subExe.objPositions" class="counted-object" ng-style="{{pos}}">
+                                        <img ng-src="{{data.imgUrl}}" height="{{data.size}}" />
+                                    </div>
+                                </div>
+                                <div class="container-result">
+                                    <p class="result-title">{{data.solutionText}}:</p>
+                                    <div class="result-sub-container">
+                                        <input result-input-field expected-input="{{subExe.number}}" ng-style="subExe.resultStyle" type="text" ng-model="subExe.userInput" class="form-control text-center result-input" placeholder="?" maxlength="2" required="" ng-disabled="scoreActive" />
+                                        <remove-button score-active="scoreActive" result-proposal="subExe.userInput"></remove-button>
+                                    </div>
+                                    <keyboard score-active="scoreActive" result-proposal="subExe.userInput"></keyboard>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td-result-title">{{resultCheck}}</td>
+                    <td align="right" class="td-check-result">
+                        <button reload-exercise-button class="btn-lg btn-primary btn-ckeck-result"></button>
+                        <button ng-click="checkResult(scoreForm.$invalid)" class="btn-lg btn-primary btn-ckeck-result" type="submit" ng-disabled="scoreActive" ng-include="src='app/components/grafics/checkButton.html'"></button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+
+
+    <div math-modals class="example-background" ng-switch on="subview" ng-show="subview">
+
+        <div class="example-content example-exercise" ng-switch-when="demo" ng-controller="exampleModalController">
+
+            <div style="z-index: 99;">
+
+                <div class="close-demo" close-button ng-click="closeDemo()"></div>
+                <div class="demo-title">{{data.exampleTitleText}}</div>
+
+                <div style="margin:10px;">
+                    <div class="container-field">
+                        <div ng-repeat="pos in example.objPositions" class="counted-object" ng-style="{{pos}}">
+                            <img math-object object-delay="{{$index}}" future-height="{{data.size}}" ng-src="{{data.imgUrl}}" height="0px" />
+                        </div>
+                    </div>
+                    <div class="container-result">
+                        <p class="result-title">{{data.solutionText}}:</p>
+                        <div class="result-sub-container">
+                            <input result-input-field is-demo="true" expected-input="{{example.number}}" style="background: rgba(255, 255, 255, 0)" type="text" class="form-control text-center result-input" placeholder="?" />
+                            <remove-button></remove-button>
+                        </div>
+                        <keyboard is-demo="true"></keyboard>
+                    </div>
+                </div>
+            </div>
+            <div demo-play-btn demo-result="{{example.objPositions.length}}" class="demo-play-button" ng-include="src='app/components/grafics/playButton.html'"></div>
+        </div>
+
+        <div class="example-content" ng-switch-when="result-check-incomplete" ng-controller="resultCheckModalController">
+            <p class="demo-title">{{resultcheckIncompleteText}}</p>
+            <br />
+            <br />
+            <button type="button" class="btn btn-default" style="margin-right:20px" ng-click="closeResultCheck('true')" ng-include="src='app/components/grafics/okButton.html'"></button>
+            <button type="button" class="btn btn-default" style="margin-left:20px" ng-click="closeResultCheck('false')" ng-include="src='app/components/grafics/cancelButton.html'"></button>
+        </div>
+    </div>
+</div>

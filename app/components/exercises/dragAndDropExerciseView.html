@@ -1,0 +1,31 @@
+<div class="container-fluid exercise-overall">
+    <div class="close-exercise" close-button what-to-close="exercise"></div>
+    <div class="exercise-main-title">{{data.titleText}}</div>
+
+    <div class="exercise-task">
+        <form name="scoreForm" novalidate>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <ul>
+                            <li ng-repeat="subExe in exercise.subExes">
+                                <div droppable-field exercise="subExe" img-row="$index" data="data" is-target="false" list-row="{{$index}}" class="drop-field"> </div>
+                                <div droppable-field exercise="subExe" img-row="$index" is-target="true" list-row="{{$index}}" class="drop-target-field" ng-style="{{subExe.resultFieldStyle}}"></div>
+                                <div class="result-circle-field">
+                                    {{subExe.number}}
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" class="td-result-title">{{resultCheck}}</td>
+                    <td align="right" class="td-check-result">
+                        <button reload-exercise-button class="btn-lg btn-primary btn-ckeck-result"></button>
+                        <button ng-click="checkResult()" class="btn-lg btn-primary btn-ckeck-result" type="submit" ng-disabled="scoreActive" ng-include="src='app/components/grafics/checkButton.html'"></button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
